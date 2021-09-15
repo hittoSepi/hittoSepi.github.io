@@ -5,21 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>A Basic HTML5 Template</title>
-  <meta name="description" content="A simple HTML5 Template for new projects.">
-  <meta name="author" content="SitePoint">
+  <title>ICS Form Example</title>
+  <meta name="description" content="ICS Form Example">
+  <meta name="author" content="Seppo Laine">
 
-  <meta property="og:title" content="A Basic HTML5 Template">
+  <meta property="og:title" content="ICS Form Example">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
-  <meta property="og:description" content="A simple HTML5 Template for new projects.">
-  <meta property="og:image" content="image.png">
-
-  <link rel="icon" href="/favicon.ico">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <meta property="og:url" content="https://hittosepi.github.io/">
+  <meta property="og:description" content="A simple ICS Form Example.">
 	<style>
 	body,
 	html {
@@ -71,6 +64,7 @@
 <body>
 	<form>
 	  <div class="row">
+	  
 		<div class="item">
 		  <label>title</label>
 		  <input type="text" name="title" id="title" value="Otsikko">
@@ -103,21 +97,17 @@
 
 		<div class="item right">
 			 <a id="save" href="#">Save</a>
-
 		</div>
-	  
+	
 	  </div>
-
 	</form>
 
-  <!-- your content here... -->
+
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
   <script src="ics.js"></script>
   <script>
 		ICS.init("save");
 		ICS.getFormData("form");
-		
-		console.log(ICS);
   </script>
 </body>
 </html>
