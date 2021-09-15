@@ -1,107 +1,123 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>ICS Form Example</title>
-  <meta name="description" content="ICS Form Example">
-  <meta name="author" content="Seppo Laine">
+		<title>ICS Form Example</title>
+		<meta name="description" content="ICS Form Example">
+		<meta name="author" content="Seppo Laine">
 
-  <meta property="og:title" content="ICS Form Example">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://hittosepi.github.io/">
-  <meta property="og:image" content=" https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
- 
-  <meta property="og:description" content="A simple ICS Form Example.">
-	<style>
-	body,
-	html {
-		font-family:Consolas;
-	}
-	form {
-		background-color: #32323a;
-		width: 300px;
-		padding: 10px;
-		color:#eaeaea;
-		border: 1px solid darken(#32323a, 10%);
-		border-radius:5px;
-	}
+		<meta property="og:title" content="ICS Form Example">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://hittosepi.github.io/">
+		<meta property="og:description" content="A simple ICS Form Example.">
+		<meta property="og:image" content="https://github.githubassets.com/images/modules/open_graph/github-logo.png">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="1200">
+		<meta property="og:image" content="https://github.githubassets.com/images/modules/open_graph/github-mark.png">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="620">
+		<meta property="og:image" content="https://github.githubassets.com/images/modules/open_graph/github-octocat.png">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="620">
 
-	.row {
-	  display: flex;
-	  flex-direction: row;
-	  flex-wrap: wrap;
-	}
+		<link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000">
+		<link rel="alternate icon" class="js-site-favicon" type="image/png"
+			href="https://github.githubassets.com/favicons/favicon-dark.png">
+		<link rel="icon" class="js-site-favicon" type="image/svg+xml"
+			href="https://github.githubassets.com/favicons/favicon-dark.svg">
 
-	.item {
-	  width: 100%;
-	  padding: 5px 10px;
-	  display:flex;
-	  flex-direction: row;
-	  flex-wrap: wrap;
-	  justify-content: space-between;
-	}
+		<style>
+			body,
+			html {
+				font-family:Consolas;
+			}
+			form {
+				background-color: #32323a;
+				width: 300px;
+				padding: 10px;
+				color:#eaeaea;
+				border: 1px solid darken(#32323a, 10%);
+				border-radius:5px;
+			}
 
-	label {
-	  text-transform: capitalize;
-	}
+			.row {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			}
 
-	.right {
-		justify-content: end;
-	}
+			.item {
+			width: 100%;
+			padding: 5px 10px;
+			display:flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			}
 
-	#save {
-	  text-decoration:none;
-	  color:white;
-	  background: #050510;
-	  padding: 6px 12px;
-	  border-radius:4px;
-	  text-transform: uppercase;
-	}
-	</style>
-</head>
+			label {
+			text-transform: capitalize;
+			}
 
-<body>
+			.right {
+				justify-content: end;
+			}
+
+			#save {
+			text-decoration:none;
+			color:white;
+			background: #050510;
+			padding: 6px 12px;
+			border-radius:4px;
+			text-transform: uppercase;
+			}
+		</style>
+	</head>
+	<body>
+
 	<form>
-	  <div class="row">
-	  
-		<div class="item">
-		  <label>title</label>
-		  <input type="text" name="title" id="title" value="Otsikko">
-		</div>
+		<div class="row">
 
-		<div class="item">
-		  <label>desc</label>
-		  <input type="text" name="desc" id="desc" value="Tapahtuman kuvaus">
-		</div>
+			<div class="item">
+			<label>title</label>
+			<input type="text" name="title" id="title" value="Otsikko">
+			</div>
 
-		<div class="item">
-		  <label>location</label>
-		  <input type="text" name="location" id="location" value="Lahti">
-		</div>
+			<div class="item">
+			<label>desc</label>
+			<input type="text" name="desc" id="desc" value="Tapahtuman kuvaus">
+			</div>
 
-		<div class="item">
-		  <label>url</label>
-		  <input type="text" name="url" id="url" value="https://www.google.fi">
-		</div>
+			<div class="item">
+			<label>location</label>
+			<input type="text" name="location" id="location" value="Lahti">
+			</div>
 
-		<div class="item">
-		  <label>start</label>
-		  <input type="datetime-local" name="start" id="startDate" value= "2021-09-16T10:12">
-		</div>
+			<div class="item">
+			<label>url</label>
+			<input type="text" name="url" id="url" value="https://www.google.fi">
+			</div>
 
-		<div class="item">
-		  <label>end</label>
-		  <input type="datetime-local" name="end" id="end"  value= "2021-09-17T10:12">
-		</div>
+			<div class="item">
+			<label>start</label>
+			<input type="datetime-local" name="start" id="startDate" value= "2021-09-16T10:12">
+			</div>
 
-		<div class="item right">
-			 <a id="save" href="#">Save</a>
+			<div class="item">
+			<label>end</label>
+			<input type="datetime-local" name="end" id="end"  value= "2021-09-17T10:12">
+			</div>
+
+			<div class="item right">
+				<a id="save" href="#">Save</a>
+			</div>
 		</div>
-	
-	  </div>
 	</form>
 
 
