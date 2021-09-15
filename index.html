@@ -1,0 +1,123 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A Basic HTML5 Template</title>
+  <meta name="description" content="A simple HTML5 Template for new projects.">
+  <meta name="author" content="SitePoint">
+
+  <meta property="og:title" content="A Basic HTML5 Template">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+  <meta property="og:description" content="A simple HTML5 Template for new projects.">
+  <meta property="og:image" content="image.png">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+	<style>
+	body,
+	html {
+		font-family:Consolas;
+	}
+	form {
+		background-color: #32323a;
+		width: 300px;
+		padding: 10px;
+		color:#eaeaea;
+		border: 1px solid darken(#32323a, 10%);
+		border-radius:5px;
+	}
+
+	.row {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	}
+
+	.item {
+	  width: 100%;
+	  padding: 5px 10px;
+	  display:flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	  justify-content: space-between;
+	}
+
+	label {
+	  text-transform: capitalize;
+	}
+
+	.right {
+		justify-content: end;
+	}
+
+	#save {
+	  text-decoration:none;
+	  color:white;
+	  background: #050510;
+	  padding: 6px 12px;
+	  border-radius:4px;
+	  text-transform: uppercase;
+	}
+	</style>
+</head>
+
+<body>
+	<form>
+	  <div class="row">
+		<div class="item">
+		  <label>title</label>
+		  <input type="text" name="title" id="title" value="Otsikko">
+		</div>
+
+		<div class="item">
+		  <label>desc</label>
+		  <input type="text" name="desc" id="desc" value="Tapahtuman kuvaus">
+		</div>
+
+		<div class="item">
+		  <label>location</label>
+		  <input type="text" name="location" id="location" value="Lahti">
+		</div>
+
+		<div class="item">
+		  <label>url</label>
+		  <input type="text" name="url" id="url" value="https://www.google.fi">
+		</div>
+
+		<div class="item">
+		  <label>start</label>
+		  <input type="datetime-local" name="start" id="startDate" value= "2021-09-16T10:12">
+		</div>
+
+		<div class="item">
+		  <label>end</label>
+		  <input type="datetime-local" name="end" id="end"  value= "2021-09-17T10:12">
+		</div>
+
+		<div class="item right">
+			 <a id="save" href="#">Save</a>
+
+		</div>
+	  
+	  </div>
+
+	</form>
+
+  <!-- your content here... -->
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="ics.js"></script>
+  <script>
+		ICS.init("save");
+		ICS.getFormData("form");
+		
+		console.log(ICS);
+  </script>
+</body>
+</html>
